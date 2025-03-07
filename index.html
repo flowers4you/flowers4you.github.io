@@ -374,15 +374,16 @@
         const heart = new f().pointsToLine();
         const svg = document.getElementById("s");
         const fraze = document.getElementById("t");
-
-        setInterval(() => {
+        const interval = () => {
             fraze.innerHTML = generateFrase();
             removeAllChildNodesWithOpacityZero(svg)
             addNewHeart(heart);
             for (let i = 0; i < Math.random() * 3 + 3; i++) {
                 addNewPath(flowers[Math.ceil(Math.random() * flowers.length + 0.001) - 1]);
             }
-        }, 1250)
+        };
+        interval();
+        setInterval(interval, 1250)
     </script>
 </body>
 
