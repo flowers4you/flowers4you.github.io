@@ -25,7 +25,7 @@
             text-align: center;
             width: 100%;
             transform: translate(-50%, -50%);
-            font-size: 2.5em;
+            font-size: 2.25em;
             color: #b5a28d;
             font-weight: bolder;
             user-select: none;
@@ -44,8 +44,8 @@
         }
 
         .heart {
-            fill: #ef4a5b;
             animation: swirlMovementHeart 2.5s ease-in-out forwards;
+            fill: url(#heartgrad);
         }
 
 
@@ -148,7 +148,7 @@
         ];
         const text = [
             "🍀Пусть сегодя тебе улыбнётся удача🍀",
-            "🌷🌺Помни, ты похожа на 🪻 цветочное поле🌸🌹",
+            "🌷🌺Ты похожа на цветочное🪻поле🌸🌹",
             "🐁Мы обязательно всех и всё обсудим🐀",
             "🎀Ты самое чудесное, что случалось со мной🎀",
             "Высшее образование как 👙",
@@ -309,7 +309,15 @@
             };
         };
     </script>
-    <svg id="s"></svg>
+    <svg id="s">
+        <defs>
+            <linearGradient id="heartgrad" gradientTransform="rotate(65)">
+                <stop offset="33%" stop-color="#ef4a5b" />
+                <stop offset="67%" stop-color="#a8388a" />
+                <stop offset="100%" stop-color="#ce0842" />
+            </linearGradient>
+        </defs>
+    </svg>
     <div class="background">
         <div class="fraz" id="t"></div>
     </div>
